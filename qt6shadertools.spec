@@ -4,10 +4,10 @@
 # Using build pattern: cmake
 #
 Name     : qt6shadertools
-Version  : 6.5.3
-Release  : 1
-URL      : https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qtshadertools-everywhere-src-6.5.3.tar.xz
-Source0  : https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qtshadertools-everywhere-src-6.5.3.tar.xz
+Version  : 6.6.0
+Release  : 2
+URL      : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qtshadertools-everywhere-src-6.6.0.tar.xz
+Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qtshadertools-everywhere-src-6.6.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-3.0 MIT
@@ -56,15 +56,15 @@ license components for the qt6shadertools package.
 
 
 %prep
-%setup -q -n qtshadertools-everywhere-src-6.5.3
-cd %{_builddir}/qtshadertools-everywhere-src-6.5.3
+%setup -q -n qtshadertools-everywhere-src-6.6.0
+cd %{_builddir}/qtshadertools-everywhere-src-6.6.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1696275870
+export SOURCE_DATE_EPOCH=1697155722
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -100,7 +100,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1696275870
+export SOURCE_DATE_EPOCH=1697155722
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6shadertools
 cp %{_builddir}/qtshadertools-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6shadertools/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -125,13 +125,13 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/QtShaderTools/6.5.3/QtShaderTools/private/qshaderbaker_p.h
-/usr/include/QtShaderTools/6.5.3/QtShaderTools/private/qshaderrewriter_p.h
-/usr/include/QtShaderTools/6.5.3/QtShaderTools/private/qspirvcompiler_p.h
-/usr/include/QtShaderTools/6.5.3/QtShaderTools/private/qspirvshader_p.h
-/usr/include/QtShaderTools/6.5.3/QtShaderTools/private/qspirvshaderremap_p.h
-/usr/include/QtShaderTools/6.5.3/QtShaderTools/private/qtshadertoolsexports_p.h
-/usr/include/QtShaderTools/6.5.3/QtShaderTools/private/qtshadertoolsglobal_p.h
+/usr/include/QtShaderTools/6.6.0/QtShaderTools/private/qshaderrewriter_p.h
+/usr/include/QtShaderTools/6.6.0/QtShaderTools/private/qspirvcompiler_p.h
+/usr/include/QtShaderTools/6.6.0/QtShaderTools/private/qspirvshader_p.h
+/usr/include/QtShaderTools/6.6.0/QtShaderTools/private/qspirvshaderremap_p.h
+/usr/include/QtShaderTools/6.6.0/QtShaderTools/private/qtshadertoolsexports_p.h
+/usr/include/QtShaderTools/6.6.0/QtShaderTools/private/qtshadertoolsglobal_p.h
+/usr/include/QtShaderTools/6.6.0/QtShaderTools/rhi/qshaderbaker.h
 /usr/include/QtShaderTools/QtShaderTools
 /usr/include/QtShaderTools/QtShaderToolsDepends
 /usr/include/QtShaderTools/QtShaderToolsVersion
@@ -163,7 +163,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libQt6ShaderTools.so.6
-/usr/lib64/libQt6ShaderTools.so.6.5.3
+/usr/lib64/libQt6ShaderTools.so.6.6.0
 
 %files license
 %defattr(0644,root,root,0755)
