@@ -7,7 +7,7 @@
 #
 Name     : qt6shadertools
 Version  : 6.6.2
-Release  : 8
+Release  : 9
 URL      : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtshadertools-everywhere-src-6.6.2.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtshadertools-everywhere-src-6.6.2.tar.xz
 Summary  : No detailed summary available
