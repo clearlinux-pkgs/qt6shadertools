@@ -7,13 +7,12 @@
 #
 Name     : qt6shadertools
 Version  : 6.6.3
-Release  : 11
+Release  : 12
 URL      : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtshadertools-everywhere-src-6.6.3.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtshadertools-everywhere-src-6.6.3.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-3.0 MIT
-Requires: qt6shadertools-bin = %{version}-%{release}
 Requires: qt6shadertools-lib = %{version}-%{release}
 Requires: qt6shadertools-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
@@ -29,20 +28,10 @@ BuildRequires : qtbase-dev
 Microsoft Visual Studio 2013 is no longer officially supported. \
 Please upgrade to at least Visual Studio 2015.
 
-%package bin
-Summary: bin components for the qt6shadertools package.
-Group: Binaries
-Requires: qt6shadertools-license = %{version}-%{release}
-
-%description bin
-bin components for the qt6shadertools package.
-
-
 %package dev
 Summary: dev components for the qt6shadertools package.
 Group: Development
 Requires: qt6shadertools-lib = %{version}-%{release}
-Requires: qt6shadertools-bin = %{version}-%{release}
 Provides: qt6shadertools-devel = %{version}-%{release}
 Requires: qt6shadertools = %{version}-%{release}
 
@@ -76,7 +65,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711469449
+export SOURCE_DATE_EPOCH=1711494963
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -137,7 +126,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711469449
+export SOURCE_DATE_EPOCH=1711494963
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6shadertools
 cp %{_builddir}/qtshadertools-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6shadertools/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -161,11 +150,6 @@ popd
 
 %files
 %defattr(-,root,root,-)
-
-%files bin
-%defattr(-,root,root,-)
-/V3/usr/bin/qsb
-/usr/bin/qsb
 
 %files dev
 %defattr(-,root,root,-)
@@ -209,8 +193,10 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /V3/usr/lib64/libQt6ShaderTools.so.6.6.3
+/V3/usr/lib64/qt6/bin/qsb
 /usr/lib64/libQt6ShaderTools.so.6
 /usr/lib64/libQt6ShaderTools.so.6.6.3
+/usr/lib64/qt6/bin/qsb
 /usr/lib64/qt6/metatypes/qt6shadertools_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/modules/ShaderTools.json
 
