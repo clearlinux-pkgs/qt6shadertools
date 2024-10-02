@@ -7,7 +7,7 @@
 #
 Name     : qt6shadertools
 Version  : 6.7.3
-Release  : 17
+Release  : 18
 URL      : https://download.qt.io/official_releases/qt/6.7/6.7.3/submodules/qtshadertools-everywhere-src-6.7.3.zip
 Source0  : https://download.qt.io/official_releases/qt/6.7/6.7.3/submodules/qtshadertools-everywhere-src-6.7.3.zip
 Summary  : No detailed summary available
@@ -66,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1727841513
+export SOURCE_DATE_EPOCH=1727898644
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -129,7 +129,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1727841513
+export SOURCE_DATE_EPOCH=1727898644
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6shadertools
 cp %{_builddir}/qtshadertools-everywhere-src-%{version}/LICENSES/Apache-2.0.txt %{buildroot}/usr/share/package-licenses/qt6shadertools/ea10c32a0b82618fb68519d072c120b00d238584 || :
